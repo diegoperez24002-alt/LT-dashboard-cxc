@@ -79,6 +79,46 @@
     .kpis{gap:12px}.kpi{padding:16px}.kpi-value{font-size:clamp(20px,2vw,27px)}.visuals{gap:12px}.chart-box{height:285px}.workspace-tabs{margin-bottom:14px}.filters{margin-bottom:12px}.active-filters{margin-bottom:12px}.action-alert{padding:12px 15px;margin-bottom:12px}.shell{padding-top:18px}.hero{margin-bottom:12px}
     @media(max-width:1050px){.compact-insights{grid-template-columns:1fr 1fr}.insight-main{grid-column:span 2}}
     @media(max-width:650px){.compact-insights{grid-template-columns:1fr}.insight-main{grid-column:auto;align-items:flex-start;flex-wrap:wrap}.insight-main b{margin-left:49px}.overview-tools{align-items:flex-start;flex-direction:column}.condensed-note{margin-left:0}}
+  
+    .mobile-filter-bar,.mobile-filter-head,.filter-backdrop{display:none}
+    @media(max-width:720px){
+      :root{--nav-h:60px;--radius:14px}
+      body{overflow-x:hidden}
+      .topbar{height:auto;min-height:60px;padding:8px 12px;gap:8px;align-items:center}
+      .official-logo{min-width:auto;gap:6px}.official-logo svg{width:30px;height:30px}.official-logo-copy b{font-size:14px}.brand-separator,.brand>div:last-child,.profile,.export-group,.nav-more{display:none}
+      .nav-actions{gap:6px;margin-left:auto}.nav-actions .btn{height:38px;padding:9px 10px}.nav-actions .btn-primary span{display:inline}.btn-icon{padding:9px!important}
+      .shell{padding:12px 12px 28px}
+      .hero{display:block;margin-bottom:10px}.eyebrow{font-size:9px}.hero h2{font-size:23px;margin:4px 0}.hero p{font-size:11px}.header-promise{font-size:8px}.hero>div:last-child{margin-top:10px!important;gap:6px!important}.demo-note{display:none}.as-of{font-size:9px;padding:7px 9px}.data-status{font-size:9px;padding:5px 7px}.latam-ribbon{height:3px;margin-bottom:10px}
+      .action-alert{display:grid;grid-template-columns:1fr auto;padding:12px;border-radius:13px}.alert-left svg{display:none}.action-alert .alert-left{gap:0}.action-alert strong{font-size:12px}.action-alert span{font-size:10px}.alert-metrics{gap:8px}.alert-metric:nth-child(2){display:none}.alert-metric strong{font-size:16px}.action-alert>.btn{display:none}
+      .mobile-filter-bar{display:flex;gap:8px;margin-bottom:10px}.mobile-filter-bar .btn{flex:1;justify-content:center}.mobile-filter-bar b{display:none;min-width:19px;height:19px;border-radius:10px;background:var(--magenta);color:#fff;font-size:9px;place-items:center}.mobile-filter-bar b.show{display:grid}
+      .filter-backdrop{position:fixed;inset:0;background:rgba(10,12,25,.55);backdrop-filter:blur(3px);z-index:79}.filter-backdrop.show{display:block}
+      .filters{position:fixed;z-index:80;left:0;right:0;bottom:0;top:auto;display:flex!important;flex-direction:column;gap:11px;max-height:86vh;overflow:auto;margin:0;padding:16px 14px 22px;border-radius:20px 20px 0 0;transform:translateY(105%);transition:transform .25s ease;box-shadow:0 -18px 50px rgba(0,0,0,.22)}.filters.open{transform:translateY(0)}
+      .mobile-filter-head{display:flex;align-items:flex-start;justify-content:space-between;padding-bottom:8px;border-bottom:1px solid var(--border)}.mobile-filter-head strong{display:block;font-size:14px}.mobile-filter-head small{display:block;color:var(--muted);font-size:9px;margin-top:3px}
+      .field label{font-size:9px}.control{height:42px}.filter-actions{display:grid!important;grid-template-columns:1fr!important;position:sticky;bottom:-22px;background:var(--surface);padding:12px 0 2px}.filter-actions .btn{justify-content:center}.mobile-hide-action{display:none!important}
+      .active-filters{margin:0 0 9px;min-height:0;overflow-x:auto;flex-wrap:nowrap;padding-bottom:2px}.active-filters>span:first-child{display:none}.filter-chip{flex:0 0 auto}
+      .compact-insights{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:9px;margin:0 -12px 12px;padding:0 12px 5px;scrollbar-width:none}.compact-insights::-webkit-scrollbar{display:none}.insight-main,.insight-item{flex:0 0 82%;scroll-snap-align:start;min-height:92px;padding:12px}.insight-item{flex-basis:62%}.insight-main b{margin-left:auto;font-size:14px}.insight-main strong{max-width:180px}.insight-icon{width:32px;height:32px}
+      .workspace-tabs{margin:0 -12px 12px;padding:6px 12px;border-left:0;border-right:0;border-radius:0;box-shadow:none;gap:5px}.tab-btn{padding:9px 11px;font-size:10px}.tab-btn svg{display:none}
+      .overview-tools{display:none}
+      .kpis{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:9px;margin:0 -12px 12px;padding:0 12px 6px;scrollbar-width:none}.kpis::-webkit-scrollbar{display:none}.kpi{flex:0 0 76%;scroll-snap-align:start;padding:14px;min-height:142px}.kpi:hover{transform:none}.kpi-value{font-size:24px;margin:10px 0 5px}.kpi-icon{width:33px;height:33px}.kpi-trend{font-size:8px}
+      .visuals{display:block}.visuals .card{margin-bottom:10px}.chart-box{height:250px;padding:6px 10px 12px}.card-head{padding:14px 14px 6px}.card-title h3{font-size:12px}.card-title p{font-size:9px}
+      .table-tools{padding:13px}.table-wrap{max-height:440px}.table-card{border-radius:14px}table{min-width:980px}th,td{padding:11px 10px}.record-count{font-size:9px}
+      .summary-strip{display:flex;overflow-x:auto;gap:8px;margin:0 -12px 12px;padding:0 12px 5px;scrollbar-width:none}.mini-stat{flex:0 0 58%;padding:12px}.mini-stat strong{font-size:18px}
+      .toolbar{padding:13px;align-items:stretch}.toolbar-group{display:grid;width:100%;grid-template-columns:1fr}.compact-control{width:100%;height:42px}.toolbar-group .btn{justify-content:center}
+      .section-grid{display:block}.section-grid>.card{margin-bottom:10px}.panel-pad,.quality-card{padding:14px}.detail-grid{grid-template-columns:1fr 1fr;gap:8px}.detail{padding:11px}.modal{border-radius:18px}.modal-body{padding:14px}
+      .toast{left:12px;right:12px;bottom:12px;max-width:none}
+    }
+
+  
+    /* Panel lateral de filtros y gráfico adicional */
+    @media(min-width:721px){
+      .mobile-filter-bar{display:flex;align-items:center;gap:8px;margin:0 0 12px}.mobile-filter-bar .btn{padding:9px 12px}.mobile-filter-bar b{display:none;min-width:19px;height:19px;border-radius:10px;background:var(--magenta);color:#fff;font-size:9px;place-items:center}.mobile-filter-bar b.show{display:grid}
+      .filter-backdrop{position:fixed;inset:0;z-index:74;background:rgba(10,12,25,.34);backdrop-filter:blur(2px)}.filter-backdrop.show{display:block}
+      .filters{position:fixed;z-index:75;left:0;top:var(--nav-h);bottom:0;width:360px;display:flex!important;flex-direction:column;gap:12px;margin:0;padding:19px 18px 24px;border:0;border-right:1px solid var(--border);border-radius:0;background:var(--surface);overflow-y:auto;transform:translateX(-102%);transition:transform .28s cubic-bezier(.22,.8,.22,1);box-shadow:18px 0 48px rgba(27,0,136,.16)}.filters.open{transform:translateX(0)}
+      .mobile-filter-head{display:flex;align-items:flex-start;justify-content:space-between;padding-bottom:12px;border-bottom:1px solid var(--border)}.mobile-filter-head strong{display:block;font-size:15px}.mobile-filter-head small{display:block;color:var(--muted);font-size:10px;margin-top:4px}
+      .field label{font-size:9px}.filter-actions{display:grid;grid-template-columns:1fr;gap:8px;margin-top:4px}.filter-actions .btn{justify-content:center}.filters .search{order:0}.active-filters{margin:0 0 12px}
+    }
+    .aging-chart-card{margin-bottom:18px}.aging-chart-box{height:285px}.aging-chart-box canvas{max-height:100%}
+    @media(max-width:720px){.aging-chart-card{margin-bottom:10px}.aging-chart-box{height:235px}.mobile-filter-bar{position:sticky;top:60px;z-index:40;padding:7px 0;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(10px)}}
 
     /* Estilos para el botón de descarga mejorado */
     .btn-download-master {
@@ -98,19 +138,16 @@
     #downloadMenu button:hover {
       background: var(--surface-2);
     }
+    @media(max-width:720px) {
+      #downloadDropdownBtn span { display: none; }
+      #downloadDropdownBtn { padding: 10px; }
+    }
+
   </style>
 </head>
 <body data-theme="light">
   <nav class="topbar" aria-label="Navegación principal">
-    <div class="brand">
-      <div class="official-logo" aria-label="LATAM Airlines">
-        <svg viewBox="0 0 64 64" role="img" aria-label="Símbolo LATAM"><defs><linearGradient id="latamPink" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ED1550"/><stop offset="1" stop-color="#FF5B35"/></linearGradient></defs><path d="M31 3C23 8 17 17 14 27c7-4 14-5 21-2 1-8 0-15-4-22Z" fill="#1B0088"/><path d="M36 9c8 8 13 18 14 31-8-7-16-11-25-12 5-5 9-12 11-19Z" fill="url(#latamPink)"/><path d="M14 31c10-1 20 2 29 10-8 1-15 5-20 12-6-7-9-14-9-22Z" fill="#32149B"/><path d="M25 32c8 2 14 6 19 12-7 2-12 7-15 15-5-8-6-17-4-27Z" fill="#ED1550"/></svg>
-        <div class="official-logo-copy"><b>LATAM</b><span>AIRLINES</span></div>
-      </div>
-      <div class="brand-separator"></div>
-      <div><h1>Control de Cobranzas</h1><p>Entidades del Estado · Finanzas</p></div>
-    </div>
-    
+    <div class="brand"><div class="official-logo" aria-label="LATAM Airlines"><svg viewBox="0 0 64 64" role="img" aria-label="Símbolo LATAM"><defs><linearGradient id="latamPink" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ED1550"/><stop offset="1" stop-color="#FF5B35"/></linearGradient></defs><path d="M31 3C23 8 17 17 14 27c7-4 14-5 21-2 1-8 0-15-4-22Z" fill="#1B0088"/><path d="M36 9c8 8 13 18 14 31-8-7-16-11-25-12 5-5 9-12 11-19Z" fill="url(#latamPink)"/><path d="M14 31c10-1 20 2 29 10-8 1-15 5-20 12-6-7-9-14-9-22Z" fill="#32149B"/><path d="M25 32c8 2 14 6 19 12-7 2-12 7-15 15-5-8-6-17-4-27Z" fill="#ED1550"/></svg><div class="official-logo-copy"><b>LATAM</b><span>AIRLINES</span></div></div><div class="brand-separator"></div><div><h1>Control de Cobranzas</h1><p>Entidades del Estado · Finanzas</p></div></div>
     <div class="nav-actions">
       <input id="fileInput" type="file" accept=".xlsx,.xls,.csv" />
       <button class="btn btn-primary" id="uploadBtn" type="button"><i data-lucide="upload-cloud" size="16"></i><span>Cargar Excel</span></button>
@@ -176,38 +213,23 @@
   </nav>
 
   <main class="shell">
-    <section class="hero">
-      <div>
-        <div class="eyebrow">Business Intelligence · Cuentas por Cobrar</div>
-        <h2>Panorama ejecutivo de cartera</h2>
-        <p>Visibilidad, priorización y control comercial en una sola vista.</p>
-        <div class="header-promise">Bienvenido a ir más alto · Finanzas que elevan decisiones</div>
-      </div>
-      <div style="display:flex;gap:9px;align-items:center;flex-wrap:wrap">
-        <span class="data-status"><span class="pulse"></span><span id="dataSource">Datos demo activos</span></span>
-        <div class="demo-note">Información ficticia para fines demostrativos</div>
-        <div class="as-of"><i data-lucide="calendar-days" size="14" style="vertical-align:middle;margin-right:6px"></i>Fecha de corte demo: <strong>20 feb 2025</strong></div>
-      </div>
-    </section>
-    <div class="latam-ribbon" aria-hidden="true"></div>
+    <section class="hero"><div><div class="eyebrow">Business Intelligence · Cuentas por Cobrar</div><h2>Panorama ejecutivo de cartera</h2><p>Visibilidad, priorización y control comercial en una sola vista.</p><div class="header-promise">Bienvenido a ir más alto · Finanzas que elevan decisiones</div></div><div style="display:flex;gap:9px;align-items:center;flex-wrap:wrap"><span class="data-status"><span class="pulse"></span><span id="dataSource">Datos demo activos</span></span><div class="demo-note">Información ficticia para fines demostrativos</div><div class="as-of"><i data-lucide="calendar-days" size="14" style="vertical-align:middle;margin-right:6px"></i>Fecha de corte demo: <strong>20 feb 2025</strong></div></div></section><div class="latam-ribbon" aria-hidden="true"></div>
 
-    <section class="action-alert" aria-live="polite">
-      <div class="alert-left"><i data-lucide="siren" size="25"></i><div><strong>Prioriza la gestión de cobranza</strong><span id="alertText">Calculando alertas...</span></div></div>
-      <div class="alert-metrics"><div class="alert-metric"><strong id="alertCount">0</strong><small>entidades críticas</small></div><div class="alert-metric"><strong id="alertAmount">S/ 0</strong><small>saldo expuesto</small></div></div>
-      <button class="btn" id="highRiskBtn" type="button">Revisar cartera crítica</button>
-    </section>
+    <section class="brand-promise" aria-label="Promesa de marca LATAM"><div class="promise-copy"><div class="promise-kicker">Gestión financiera que conecta decisiones</div><h3>Bienvenido a ir más alto</h3><p>Convertimos datos de cobranza en acciones claras, trazables y oportunas.</p><span class="promise-chip"><i data-lucide="sparkles" size="13"></i>Más visibilidad · Más control · Más impacto</span></div><div class="promise-flight" aria-hidden="true"><svg viewBox="0 0 300 90"><path d="M8 67 C75 20, 165 18, 285 43" fill="none" stroke="rgba(255,255,255,.36)" stroke-width="2" stroke-dasharray="7 7"/><path d="M243 24l42 18-31 5-12 21-7-2 6-19-18-7 20-16Z" fill="white" opacity=".95"/></svg></div></section>
+    <div class="journey-line"><div class="journey-step" style="--step:#1B0088"><strong>1. Consolidar</strong>Base única de entidades y OS</div><div class="journey-step" style="--step:#E40046"><strong>2. Priorizar</strong>Riesgo, saldo y antigüedad</div><div class="journey-step" style="--step:#F79009"><strong>3. Gestionar</strong>Acciones y compromisos</div><div class="journey-step" style="--step:#12B76A"><strong>4. Elevar</strong>Decisiones con trazabilidad</div></div>
 
-    <section class="filters" aria-label="Filtros del dashboard">
+    <section class="action-alert" aria-live="polite"><div class="alert-left"><i data-lucide="siren" size="25"></i><div><strong>Prioriza la gestión de cobranza</strong><span id="alertText">Calculando alertas...</span></div></div><div class="alert-metrics"><div class="alert-metric"><strong id="alertCount">0</strong><small>entidades críticas</small></div><div class="alert-metric"><strong id="alertAmount">S/ 0</strong><small>saldo expuesto</small></div></div><button class="btn" id="highRiskBtn" type="button">Revisar cartera crítica</button></section>
+
+    <div class="mobile-filter-bar"><button class="btn btn-primary" id="mobileFilterBtn" type="button"><i data-lucide="sliders-horizontal" size="16"></i><span>Filtrar cartera</span><b id="mobileFilterCount">0</b></button><button class="btn" id="mobileClearBtn" type="button"><i data-lucide="eraser" size="16"></i><span>Limpiar filtros</span></button></div>
+    
+    <section class="filters" id="filtersPanel" aria-label="Filtros del dashboard">
+      <div class="mobile-filter-head"><div><strong>Filtros de cartera</strong><small>Selecciona uno o más criterios</small></div><button class="btn btn-icon" id="closeFiltersBtn" type="button" aria-label="Cerrar filtros"><i data-lucide="x" size="17"></i></button></div>
       <div class="field search"><label for="searchInput">Buscar entidad o RUC</label><i data-lucide="search"></i><input class="control" id="searchInput" placeholder="Ej. Municipalidad o 20123456789" /></div>
       <div class="field"><label for="categoryFilter">Categoría</label><select class="control" id="categoryFilter"><option value="">Todas</option></select></div>
       <div class="field"><label for="regionFilter">Región</label><select class="control" id="regionFilter"><option value="">Todas</option></select></div>
-      <div class="field"><label for="riskFilter">Riesgo</label><select class="control" id="riskFilter"><option value="">Todos</option><option>Alto</option><option>Medio</option><option>Bajo</option></select></div>
-      <div class="field"><label for="statusFilter">Estado</label><select class="control" id="statusFilter"><option value="">Todos</option><option>Vencida</option><option>Por Vencer</option><option>Vigente</option></select></div>
-      <div class="field"><label for="agingFilter">Antigüedad</label><select class="control" id="agingFilter"><option value="">Todos los rangos</option><option value="current">No vencida</option><option value="1-30">1–30 días</option><option value="31-60">31–60 días</option><option value="61-90">61–90 días</option><option value="90+">Más de 90 días</option></select></div>
-      <div class="field"><label for="lineFilter">Línea</label><select class="control" id="lineFilter"><option value="">Todas</option><option>Activa</option><option>Desactivada</option></select></div>
-      <div class="filter-actions"><button class="btn btn-danger-soft" id="clearFilters" type="button" title="Borrar todos los filtros"><i data-lucide="eraser" size="16"></i>Borrar filtros</button><button class="btn" id="saveViewBtn" type="button" title="Guardar vista actual"><i data-lucide="bookmark" size="16"></i>Guardar vista</button></div>
-    </section>
-    <div class="active-filters" id="activeFilters"><span style="font-size:10px;color:var(--muted)">Sin filtros activos</span></div>
+      <div class="field"><label for="riskFilter">Riesgo</label><select class="control" id="riskFilter"><option value="">Todos</option><option>Alto</option><option>Medio</option><option>Bajo</option></select></div><div class="field"><label for="statusFilter">Estado</label><select class="control" id="statusFilter"><option value="">Todos</option><option>Vencida</option><option>Por Vencer</option><option>Vigente</option></select></div><div class="field"><label for="agingFilter">Antigüedad</label><select class="control" id="agingFilter"><option value="">Todos los rangos</option><option value="current">No vencida</option><option value="1-30">1–30 días</option><option value="31-60">31–60 días</option><option value="61-90">61–90 días</option><option value="90+">Más de 90 días</option></select></div><div class="field"><label for="lineFilter">Línea</label><select class="control" id="lineFilter"><option value="">Todas</option><option>Activa</option><option>Desactivada</option></select></div>
+      <div class="filter-actions"><button class="btn btn-danger-soft" id="clearFilters" type="button" title="Borrar todos los filtros"><i data-lucide="eraser" size="16"></i>Borrar filtros</button><button class="btn mobile-hide-action" id="saveViewBtn" type="button" title="Guardar vista actual"><i data-lucide="bookmark" size="16"></i>Guardar vista</button></div>
+    </section><div class="active-filters" id="activeFilters"><span style="font-size:10px;color:var(--muted)">Sin filtros activos</span></div>
 
     <section class="compact-insights" aria-label="Insights prioritarios">
       <article class="insight-main"><span class="insight-icon"><i data-lucide="triangle-alert" size="18"></i></span><div><small>Mayor exposición vencida</small><strong id="heroEntity">Calculando...</strong><span class="sub"><span id="heroOs">0</span> OS · <span id="heroDays">0</span> días · Línea <span id="heroLine">—</span></span></div><b id="heroDebt">S/ 0</b></article>
@@ -237,6 +259,8 @@
       <article class="card"><header class="card-head"><div class="card-title"><i data-lucide="bar-chart-3" size="19"></i><div><h3>Top 5 de morosidad</h3><p>Entidades con mayor saldo vencido</p></div></div></header><div class="chart-box"><canvas id="topDebtorsChart"></canvas></div></article>
       <article class="card"><header class="card-head"><div class="card-title"><i data-lucide="pie-chart" size="19"></i><div><h3>Distribución de cartera</h3><p>Saldo por estado de vencimiento</p></div></div></header><div class="chart-box"><canvas id="portfolioChart"></canvas><div class="donut-center"><strong id="donutTotal">S/ 0</strong><span>Cartera visible</span></div></div></article>
     </section>
+
+    <section class="card aging-chart-card"><header class="card-head"><div class="card-title"><i data-lucide="chart-column-big" size="19"></i><div><h3>Antigüedad de deuda</h3><p>Distribución del saldo por tramo de atraso</p></div></div><div class="record-count" id="agingChartCaption">Cartera visible</div></header><div class="chart-box aging-chart-box"><canvas id="agingChart"></canvas></div></section>
 
     <section class="card table-card">
       <div class="table-tools"><div class="card-title"><i data-lucide="table-2" size="19"></i><div><h3>Detalle de entidades</h3><p>Haz clic en un encabezado para ordenar</p></div></div><div class="record-count" id="recordCount">0 registros</div></div>
@@ -282,6 +306,7 @@
     </section>
   </main>
 
+  <div class="filter-backdrop" id="filterBackdrop"></div>
   <div class="drop-overlay" id="dropOverlay"><div class="drop-zone"><i data-lucide="file-spreadsheet" size="54"></i><h3>Suelta tu archivo aquí</h3><p>Formatos permitidos: XLSX, XLS y CSV</p></div></div>
   <div class="loading" id="loading"><div><div class="spinner"></div><strong>Procesando y conciliando datos...</strong></div></div>
   <div class="toast" id="toast" role="status" aria-live="polite"><i data-lucide="check-circle-2" size="19"></i><span id="toastText"></span></div>
@@ -363,6 +388,7 @@
         if(type==='bar'){const d=[...filteredData].filter(v=>v.estado==='Vencida').sort((a,b)=>b.saldo-a.saldo).slice(0,5),max=Math.max(...d.map(v=>v.saldo),1);if(!d.length){x.textAlign='center';x.fillText('Sin deuda vencida para esta selección',w/2,h/2);return}d.forEach((v,i)=>{const y=32+i*48,bw=(w-220)*v.saldo/max;x.fillStyle=i===0?'#E40046':'#1B0088';x.fillRect(185,y,bw,20);x.fillStyle=text;x.textAlign='right';x.fillText(v.entidad.slice(0,24),175,y+15);x.textAlign='left';x.fillText(money.format(v.saldo),190+bw,y+15)})}
         else{const labels=['Vencida','Por Vencer','Vigente'],colors=['#E40046','#F79009','#12B76A'],vals=labels.map(a=>filteredData.filter(v=>v.estado===a).reduce((q,v)=>q+v.saldo,0)),total=vals.reduce((a,b)=>a+b,0);if(!total){x.textAlign='center';x.fillText('Sin saldos para esta selección',w/2,h/2);return}let start=-Math.PI/2;vals.forEach((v,i)=>{const a=v/total*Math.PI*2;x.beginPath();x.arc(w/2,h/2-15,Math.min(w,h)*.27,start,start+a);x.lineWidth=34;x.strokeStyle=colors[i];x.stroke();start+=a});labels.forEach((l,i)=>{x.fillStyle=colors[i];x.fillRect(w/2-115+i*88,h-35,9,9);x.fillStyle=text;x.fillText(l,w/2-101+i*88,h-26)})}}
       draw('topDebtorsChart','bar');draw('portfolioChart','donut');
+      const c=document.getElementById('agingChart');if(c){const box=c.parentElement,r=box.getBoundingClientRect(),dpr=window.devicePixelRatio||1;c.width=Math.max(300,r.width)*dpr;c.height=Math.max(220,r.height)*dpr;c.style.width='100%';c.style.height='100%';const x=c.getContext('2d');x.scale(dpr,dpr);const w=c.width/dpr,h=c.height/dpr,labels=['No vencida','1–30','31–60','61–90','Más de 90'],colors=['#12B76A','#F79009','#F26B38','#E40046','#1B0088'],values=[filteredData.filter(v=>v.diasAtraso===0).reduce((a,v)=>a+v.saldo,0),filteredData.filter(v=>v.diasAtraso>=1&&v.diasAtraso<=30).reduce((a,v)=>a+v.saldo,0),filteredData.filter(v=>v.diasAtraso>=31&&v.diasAtraso<=60).reduce((a,v)=>a+v.saldo,0),filteredData.filter(v=>v.diasAtraso>=61&&v.diasAtraso<=90).reduce((a,v)=>a+v.saldo,0),filteredData.filter(v=>v.diasAtraso>90).reduce((a,v)=>a+v.saldo,0)],max=Math.max(...values,1),gap=(w-70)/values.length,bw=Math.min(58,gap*.55);x.clearRect(0,0,w,h);values.forEach((v,i)=>{const bh=(h-65)*v/max,bx=48+i*gap+(gap-bw)/2,by=h-38-bh;x.fillStyle=colors[i];x.fillRect(bx,by,bw,bh);x.fillStyle=getComputedStyle(document.body).getPropertyValue('--muted');x.font='10px Inter,Arial';x.textAlign='center';x.fillText(labels[i],bx+bw/2,h-18)});setText('agingChartCaption',`${money.format(values.reduce((a,b)=>a+b,0))} distribuidos por antigüedad`)}
     }
     function renderCharts(){
       if(!window.Chart){renderCanvasFallback();return}
@@ -372,6 +398,9 @@
       charts.top=new Chart(document.getElementById('topDebtorsChart'),{type:'bar',data:{labels:overdue.map(x=>x.entidad.length>38?x.entidad.slice(0,38)+'…':x.entidad),datasets:[{label:'Saldo vencido',data:overdue.map(x=>x.saldo),backgroundColor:['#E40046','#ef326a','#f45d87','#6c55cc','#1B0088'],borderRadius:7,borderSkipped:false,barThickness:19}]},options:{responsive:true,maintainAspectRatio:false,indexAxis:'y',plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>money.format(c.raw)}}},scales:{x:{grid:{color:theme.grid},ticks:{callback:v=>'S/ '+number.format(v/1000)+'k'}},y:{grid:{display:false}}}}});
       const states=['Vencida','Por Vencer','Vigente'],vals=states.map(s=>filteredData.filter(x=>x.estado===s).reduce((a,x)=>a+x.saldo,0));
       charts.donut=new Chart(document.getElementById('portfolioChart'),{type:'doughnut',data:{labels:states,datasets:[{data:vals,backgroundColor:['#E40046','#F79009','#12B76A'],borderColor:theme.surface,borderWidth:5,hoverOffset:8}]},options:{responsive:true,maintainAspectRatio:false,cutout:'68%',plugins:{legend:{position:'bottom',labels:{usePointStyle:true,padding:18}},tooltip:{callbacks:{label:c=>`${c.label}: ${money.format(c.raw)}`}}}}});
+      const bands=[{label:'No vencida',min:0,max:0,color:'#12B76A'},{label:'1–30 días',min:1,max:30,color:'#F79009'},{label:'31–60 días',min:31,max:60,color:'#F26B38'},{label:'61–90 días',min:61,max:90,color:'#E40046'},{label:'Más de 90 días',min:91,max:Infinity,color:'#1B0088'}],bandValues=bands.map(b=>filteredData.filter(x=>x.diasAtraso>=b.min&&x.diasAtraso<=b.max).reduce((a,x)=>a+x.saldo,0));
+      charts.aging=new Chart(document.getElementById('agingChart'),{type:'bar',data:{labels:bands.map(b=>b.label),datasets:[{label:'Saldo',data:bandValues,backgroundColor:bands.map(b=>b.color),borderRadius:7,borderSkipped:false,maxBarThickness:54}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>`Saldo: ${money.format(c.raw)}`}}},scales:{x:{grid:{display:false}},y:{beginAtZero:true,grid:{color:theme.grid},ticks:{callback:v=>'S/ '+number.format(v/1000)+'k'}}}}});
+      const agingTotal=bandValues.reduce((a,b)=>a+b,0);setText('agingChartCaption',`${money.format(agingTotal)} distribuidos por antigüedad`);
     }
     function renderTable(){
       const body=document.getElementById('dataBody');document.getElementById('emptyState').hidden=filteredData.length>0;setText('recordCount',`${number.format(filteredData.length)} registros visibles`);
@@ -428,7 +457,7 @@
 
     document.getElementById('uploadBtn').onclick=()=>document.getElementById('fileInput').click();document.getElementById('fileInput').onchange=e=>loadFile(e.target.files[0]);document.getElementById('exportBtn')?.addEventListener('click',exportFiltered);document.getElementById('exportPdfBtn')?.addEventListener('click',exportPortfolioPdf);
     ['searchInput','categoryFilter','regionFilter','riskFilter','statusFilter','agingFilter','lineFilter'].forEach(id=>document.getElementById(id).addEventListener(id==='searchInput'?'input':'change',filterData));
-    document.getElementById('clearFilters').onclick=()=>{['searchInput','categoryFilter','regionFilter','riskFilter','statusFilter','agingFilter','lineFilter'].forEach(id=>document.getElementById(id).value='');filterData()};
+    document.getElementById('clearFilters').onclick=()=>{['searchInput','categoryFilter','regionFilter','riskFilter','statusFilter','agingFilter','lineFilter'].forEach(id=>document.getElementById(id).value='');filterData();updateMobileFilterCount();if(window.innerWidth<=720)closeMobileFilters()};
     document.getElementById('highRiskBtn').onclick=()=>{document.getElementById('riskFilter').value='Alto';filterData();document.querySelector('.table-card').scrollIntoView({behavior:'smooth'})};
     document.querySelectorAll('th[data-sort]').forEach(th=>th.onclick=()=>{const key=th.dataset.sort;sortState={key,dir:sortState.key===key&&sortState.dir==='asc'?'desc':'asc'};sortData();renderTable();lucide.createIcons()});
     document.getElementById('themeBtn').onclick=()=>{const dark=document.body.dataset.theme!=='dark';document.body.dataset.theme=dark?'dark':'light';document.getElementById('themeBtn').innerHTML=`<i data-lucide="${dark?'sun':'moon'}" size="17"></i>`;renderCharts();safeIcons()};
@@ -448,7 +477,7 @@
     document.addEventListener('click',e=>{if(!e.target.closest('.nav-more'))closeMenu()});
     document.getElementById('closeModal').onclick=()=>document.getElementById('detailModal').classList.remove('show');
     document.getElementById('detailModal').onclick=e=>{if(e.target.id==='detailModal')e.currentTarget.classList.remove('show')};
-    document.addEventListener('keydown',e=>{if(e.key==='Escape')document.getElementById('detailModal').classList.remove('show')});
+    document.addEventListener('keydown',e=>{if(e.key==='Escape'){document.getElementById('detailModal').classList.remove('show');closeMobileFilters()}});
     document.getElementById('downloadMasterExcel')?.addEventListener('click', downloadMasterExcel);
     document.getElementById('downloadMasterPdf')?.addEventListener('click', downloadMasterPdf);
     document.getElementById('quickMasterExcel')?.addEventListener('click', downloadMasterExcel);
@@ -456,6 +485,13 @@
     
     document.querySelectorAll('.tab-btn').forEach(btn=>btn.onclick=()=>{document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));document.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active'));btn.classList.add('active');document.getElementById(btn.dataset.tab).classList.add('active');if(btn.dataset.tab==='ordersPanel')renderOrders();safeIcons()});
     document.getElementById('saveViewBtn').onclick=()=>showToast('Vista guardada durante esta sesión.');document.getElementById('osSearch').addEventListener('input',renderOrders);document.getElementById('osStatus').addEventListener('change',renderOrders);document.getElementById('inlineUpload').onclick=()=>document.getElementById('fileInput').click();document.getElementById('qualityTemplateBtn').onclick=downloadTemplate;document.getElementById('qualityDemoBtn').onclick=restoreDemo;document.getElementById('exportOsBtn').onclick=()=>{if(!filteredOrders.length)return showToast('No hay órdenes para exportar.',true);const rows=osExportRows();if(window.XLSX){const ws=XLSX.utils.json_to_sheet(rows),wb=XLSX.utils.book_new();ws['!cols']=[{wch:16},{wch:40},{wch:13},{wch:15},{wch:15},{wch:15},{wch:12},{wch:16},{wch:16},{wch:14},{wch:10},{wch:18},{wch:10}];XLSX.utils.book_append_sheet(wb,ws,'Órdenes de Servicio');XLSX.writeFile(wb,'LATAM_detalle_ordenes_servicio.xlsx')}else{const h=Object.keys(rows[0]),esc=v=>'"'+String(v??'').replace(/"/g,'""')+'"';downloadBlob('\ufeff'+h.map(esc).join(',')+'\n'+rows.map(r=>h.map(k=>esc(r[k])).join(',')).join('\n'),'LATAM_detalle_ordenes_servicio.csv','text/csv;charset=utf-8')}showToast('Órdenes de servicio descargadas en Excel.')};document.getElementById('exportOsPdfBtn').onclick=exportOrdersPdf
+
+    const filterIds=['searchInput','categoryFilter','regionFilter','riskFilter','statusFilter','agingFilter','lineFilter'];
+    function updateMobileFilterCount(){const n=filterIds.filter(id=>document.getElementById(id)?.value).length,b=document.getElementById('mobileFilterCount');if(b){b.textContent=n;b.classList.toggle('show',n>0)}}
+    function openMobileFilters(){document.getElementById('filtersPanel').classList.add('open');document.getElementById('filterBackdrop').classList.add('show');document.body.style.overflow='hidden'}
+    function closeMobileFilters(){document.getElementById('filtersPanel').classList.remove('open');document.getElementById('filterBackdrop').classList.remove('show');document.body.style.overflow=''}
+    document.getElementById('mobileFilterBtn').onclick=()=>document.getElementById('filtersPanel').classList.contains('open')?closeMobileFilters():openMobileFilters();document.getElementById('closeFiltersBtn').onclick=closeMobileFilters;document.getElementById('filterBackdrop').onclick=closeMobileFilters;document.getElementById('mobileClearBtn').onclick=()=>document.getElementById('clearFilters').click();filterIds.forEach(id=>document.getElementById(id).addEventListener(id==='searchInput'?'input':'change',updateMobileFilterCount));
+
     let dragDepth=0;window.addEventListener('dragenter',e=>{e.preventDefault();dragDepth++;document.getElementById('dropOverlay').classList.add('active')});window.addEventListener('dragover',e=>e.preventDefault());window.addEventListener('dragleave',e=>{e.preventDefault();if(--dragDepth<=0){dragDepth=0;document.getElementById('dropOverlay').classList.remove('active')}});window.addEventListener('drop',e=>{e.preventDefault();dragDepth=0;document.getElementById('dropOverlay').classList.remove('active');loadFile(e.dataTransfer.files[0])});
 
   </script>
